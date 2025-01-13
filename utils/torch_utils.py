@@ -466,6 +466,6 @@ def autocast(enabled: bool, device: str = "cuda"):
         ```
     """
     if TORCH_1_13:
-        return torch.amp.autocast(device, enabled=enabled)
+        return torch.amp.autocast(device.type, enabled=enabled)
     else:
         return torch.cuda.amp.autocast(enabled)
