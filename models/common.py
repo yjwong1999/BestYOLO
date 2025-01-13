@@ -908,7 +908,7 @@ class MobileNetV3s3(nn.Module):
 class efficientnet_b01(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_b0()
+        model = models.efficientnet_b0(pretrained=True)
         modules = list(model.children())
         modules = modules[0][:4]
         self.model = nn.Sequential(*modules)
@@ -918,7 +918,7 @@ class efficientnet_b01(nn.Module):
 class efficientnet_b02(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_b0()
+        model = models.efficientnet_b0(pretrained=True)
         modules = list(model.children())
         modules = modules[0][4:6]
         self.model = nn.Sequential(*modules)
@@ -928,7 +928,7 @@ class efficientnet_b02(nn.Module):
 class efficientnet_b03(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_b0()
+        model = models.efficientnet_b0(pretrained=True)
         modules = list(model.children())
         modules = modules[0][6:]
         self.model = nn.Sequential(*modules)
@@ -941,7 +941,7 @@ class efficientnet_b03(nn.Module):
 class RegNety4001(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.regnet_y_400mf()
+        model = models.regnet_y_400mf(pretrained=True)
         modules = list(model.children())
         self.model = nn.Sequential(modules[0], *modules[1][:2])
 
@@ -951,7 +951,7 @@ class RegNety4001(nn.Module):
 class RegNety4002(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.regnet_y_400mf()
+        model = models.regnet_y_400mf(pretrained=True)
         modules = list(model.children())
         modules = modules[1][2]
         self.model = nn.Sequential(*modules)
@@ -962,7 +962,7 @@ class RegNety4002(nn.Module):
 class RegNety4003(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.regnet_y_400mf()
+        model = models.regnet_y_400mf(pretrained=True)
         modules = list(model.children())
         modules = modules[1][3]
         self.model = nn.Sequential(*modules)
@@ -976,7 +976,7 @@ class RegNety4003(nn.Module):
 class resnet181(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.resnet18()
+        model = models.resnet18(pretrained=True)
         modules = list(model.children())
         modules = modules[:6]
         self.model = nn.Sequential(*modules)
@@ -986,7 +986,7 @@ class resnet181(nn.Module):
 class resnet182(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.resnet18()
+        model = models.resnet18(pretrained=True)
         modules = list(model.children())
         modules = modules[6:7]
         self.model = nn.Sequential(*modules)
@@ -996,7 +996,7 @@ class resnet182(nn.Module):
 class resnet183(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.resnet18()
+        model = models.resnet18(pretrained=True)
         modules = list(model.children())
         modules = modules[7:8]
         self.model = nn.Sequential(*modules)
@@ -1009,7 +1009,7 @@ class resnet183(nn.Module):
 class resnet341(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.resnet34()
+        model = models.resnet34(pretrained=True)
         modules = list(model.children())
         modules = modules[:6]
         self.model = nn.Sequential(*modules)
@@ -1019,7 +1019,7 @@ class resnet341(nn.Module):
 class resnet342(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.resnet34()
+        model = models.resnet34(pretrained=True)
         modules = list(model.children())
         modules = modules[6]
         self.model = nn.Sequential(*modules)
@@ -1029,7 +1029,7 @@ class resnet342(nn.Module):
 class resnet343(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.resnet34()
+        model = models.resnet34(pretrained=True)
         modules = list(model.children())
         modules = modules[7]
         self.model = nn.Sequential(*modules)
@@ -1076,7 +1076,7 @@ class resnet503(nn.Module):
 class efficientnet_v2_s1(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_v2_s()
+        model = models.efficientnet_v2_s(pretrained=True)
         modules = list(model.children())
         modules = modules[0][:4]
         self.model = nn.Sequential(*modules)
@@ -1086,7 +1086,7 @@ class efficientnet_v2_s1(nn.Module):
 class efficientnet_v2_s2(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_v2_s()
+        model = models.efficientnet_v2_s(pretrained=True)
         modules = list(model.children())
         modules = modules[0][4:6]
         self.model = nn.Sequential(*modules)
@@ -1096,7 +1096,7 @@ class efficientnet_v2_s2(nn.Module):
 class efficientnet_v2_s3(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_v2_s()
+        model = models.efficientnet_v2_s(pretrained=True)
         modules = list(model.children())
         modules = modules[0][6:]
         self.model = nn.Sequential(*modules)
@@ -1109,7 +1109,7 @@ class efficientnet_v2_s3(nn.Module):
 class efficientnet_b11(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_b1()
+        model = models.efficientnet_b1(pretrained=True)
         modules = list(model.children())
         modules = modules[0][:4]
         self.model = nn.Sequential(*modules)
@@ -1119,7 +1119,7 @@ class efficientnet_b11(nn.Module):
 class efficientnet_b12(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_b1()
+        model = models.efficientnet_b1(pretrained=True)
         modules = list(model.children())
         modules = modules[0][4:6]
         self.model = nn.Sequential(*modules)
@@ -1129,7 +1129,7 @@ class efficientnet_b12(nn.Module):
 class efficientnet_b13(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.efficientnet_b0()
+        model = models.efficientnet_b1(pretrained=True)
         modules = list(model.children())
         modules = modules[0][6:]
         self.model = nn.Sequential(*modules)
@@ -1142,7 +1142,7 @@ class efficientnet_b13(nn.Module):
 class mobilenet_v21(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.mobilenet_v2()
+        model = models.mobilenet_v2(pretrained=True)
         modules = list(model.children())
         modules = modules[0][:7]
         self.model = nn.Sequential(*modules)
@@ -1152,7 +1152,7 @@ class mobilenet_v21(nn.Module):
 class mobilenet_v22(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.mobilenet_v2()
+        model = models.mobilenet_v2(pretrained=True)
         modules = list(model.children())
         modules = modules[0][7:14]
         self.model = nn.Sequential(*modules)
@@ -1162,7 +1162,7 @@ class mobilenet_v22(nn.Module):
 class mobilenet_v23(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.mobilenet_v2()
+        model = models.mobilenet_v2(pretrained=True)
         modules = list(model.children())
         modules = modules[0][14:19]
         self.model = nn.Sequential(*modules)
@@ -1175,7 +1175,7 @@ class mobilenet_v23(nn.Module):
 class wide_resnet50_21(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.wide_resnet50_2()
+        model = models.wide_resnet50_2(pretrained=True)
         modules = list(model.children())
         modules = modules[:6]
         self.model = nn.Sequential(*modules)
@@ -1185,7 +1185,7 @@ class wide_resnet50_21(nn.Module):
 class wide_resnet50_22(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.wide_resnet50_2()
+        model = models.wide_resnet50_2(pretrained=True)
         modules = list(model.children())
         modules = modules[6]
         self.model = nn.Sequential(*modules)
@@ -1195,7 +1195,7 @@ class wide_resnet50_22(nn.Module):
 class wide_resnet50_23(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.wide_resnet50_2()
+        model = models.wide_resnet50_2(pretrained=True)
         modules = list(model.children())
         modules = modules[7]
         self.model = nn.Sequential(*modules)
@@ -1208,7 +1208,7 @@ class wide_resnet50_23(nn.Module):
 class vgg11_bn1(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.vgg11_bn()
+        model = models.vgg11_bn(pretrained=True)
         modules = list(model.children())
         modules = modules[0][:14]
         self.model = nn.Sequential(*modules)
@@ -1218,7 +1218,7 @@ class vgg11_bn1(nn.Module):
 class vgg11_bn2(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.vgg11_bn()
+        model = models.vgg11_bn(pretrained=True)
         modules = list(model.children())
         modules = modules[0][14:21]
         self.model = nn.Sequential(*modules)
@@ -1228,7 +1228,7 @@ class vgg11_bn2(nn.Module):
 class vgg11_bn3(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.vgg11_bn()
+        model = models.vgg11_bn(pretrained=True)
         modules = list(model.children())
         modules = modules[0][21:28]
         self.model = nn.Sequential(*modules)
@@ -1241,7 +1241,7 @@ class vgg11_bn3(nn.Module):
 class convnext_tiny1(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.convnext_tiny()
+        model = models.convnext_tiny(pretrained=True)
         modules = list(model.children())
         modules = modules[0][:4]
         self.model = nn.Sequential(*modules)
@@ -1251,7 +1251,7 @@ class convnext_tiny1(nn.Module):
 class convnext_tiny2(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.convnext_tiny()
+        model = models.convnext_tiny(pretrained=True)
         modules = list(model.children())
         modules = modules[0][4:6]
         self.model = nn.Sequential(*modules)
@@ -1261,7 +1261,7 @@ class convnext_tiny2(nn.Module):
 class convnext_tiny3(nn.Module):
     def __init__(self, ignore) -> None:
         super().__init__()
-        model = models.convnext_tiny()
+        model = models.convnext_tiny(pretrained=True)
         modules = list(model.children())
         modules = modules[0][6:8]
         self.model = nn.Sequential(*modules)
